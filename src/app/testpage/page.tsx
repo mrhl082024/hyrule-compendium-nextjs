@@ -1,3 +1,3 @@
 export default function testpage() {
-  return <div>test routing</div>;
+  return <div>Fuck U!</div>;
 }
