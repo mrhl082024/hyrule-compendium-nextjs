@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       test
       <p>so this is next.js</p>
-      <Link href={"/test"}>click me test!</Link>
+      <Link href="/testpage">link to testpage</Link>
     </div>
   );
 }
