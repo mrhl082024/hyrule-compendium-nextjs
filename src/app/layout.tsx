@@ -6,9 +6,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <ContextWindow>
-      <body>{children}</body>
-    </ContextWindow>
-  );
+  return <ContextWindow>{children}</ContextWindow>;
 }
