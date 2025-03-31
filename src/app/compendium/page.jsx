@@ -6,7 +6,6 @@ import { Context } from "../ContextWindow.jsx";
 
 export default function Compendium() {
   const { test } = useContext(Context);
-  console.log(test);
 
   return (
     <>
