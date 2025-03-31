@@ -10,13 +10,15 @@ export default function Header() {
   return (
     <>
       <section>
-        <img src="../assets/logos/zelda-botw-logo.webp" alt="header logo" />
+        <img
+          src="../assets/logos/zelda-botw-logo.jpg"
+          alt="zelda-botw-logo"
+          class="w-8 h-16"
+        />
       </section>
       <section>
-        {categories.map((name) => (
-          <>
-            <button>{name} </button>
-          </>
+        {categories.map((name, id) => (
+          <button key={id}>{name} </button>
         ))}
       </section>
     </>
