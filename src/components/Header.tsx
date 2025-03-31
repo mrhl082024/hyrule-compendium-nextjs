@@ -1,3 +1,4 @@
+import headerLogo from "../assets/logos/zelda-botw-logo.webp";
 export default function Header() {
   const categories = [
     "Creatures",
@@ -9,7 +10,7 @@ export default function Header() {
   return (
     <>
       <section>
-        <img src={headerLogo} alt="header logo" />
+        <img src="../assets/logos/zelda-botw-logo.webp" alt="header logo" />
       </section>
       <section>
         {categories.map((name) => (
