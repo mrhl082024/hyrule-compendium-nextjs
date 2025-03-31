@@ -1,10 +1,12 @@
 "use client";
-import Link from "next/link";
-import headerLogo from "../assets/logos/zelda-botw-logo.webp";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import { Context } from "@/app/ContextWindow";
 import "../styles/globals.css";
+import headerLogo from "../assets/logos/zelda-botw-logo.webp";
 
 export default function Header() {
+  const { test, setTest } = useContext(Context);
   const router = useRouter();
   const categories = [
     "Creatures",
@@ -13,6 +15,8 @@ export default function Header() {
     "Monsters",
     "Treasure",
   ];
+  console.log(test);
+
   return (
     <>
       <section>
