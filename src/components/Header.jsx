@@ -37,6 +37,7 @@ export default function Header() {
               setEntryId(name.toLowerCase());
               router.push("/compendium");
             }}
+            className="w-[100px] h-[30px] bg-green-900 "
           >
             {name}
           </button>
