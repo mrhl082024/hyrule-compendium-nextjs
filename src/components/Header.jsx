@@ -6,7 +6,7 @@ import "../styles/globals.css";
 import headerLogo from "../assets/logos/zelda-botw-logo.png";
 
 export default function Header() {
-  const { test, setTest } = useContext(Context);
+  const { setCategory, setEntryId } = useContext(Context);
   const router = useRouter();
   const categories = [
     "Creatures",
@@ -15,7 +15,6 @@ export default function Header() {
     "Monsters",
     "Treasure",
   ];
-  console.log(test);
 
   return (
     <>
@@ -34,6 +33,8 @@ export default function Header() {
           <button
             key={id}
             onClick={() => {
+              setCategory("category");
+              setEntryId(name.toLowerCase());
               router.push("/compendium");
             }}
           >
