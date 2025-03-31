@@ -17,7 +17,7 @@ export default function Header() {
   ];
 
   return (
-    <>
+    <div className="bg-[url(../assets/fanart/1133044.jpg)]">
       <section>
         <img
           src={headerLogo.src}
@@ -37,12 +37,12 @@ export default function Header() {
               setEntryId(name.toLowerCase());
               router.push("/compendium");
             }}
-            className="w-[100px] h-[30px] bg-green-900 "
+            className="w-[100px] h-[30px] bg-green-900 hover:bg-green-700"
           >
             {name}
           </button>
         ))}
       </section>
-    </>
+    </div>
   );
 }
