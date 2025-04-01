@@ -13,7 +13,7 @@ export default function EntryIdCards() {
         <section className="grid grid-cols-[repeat(5,250px)] justify-center bg-[url(../assets/fanart/1133045.jpg)] bg-fixed gap-[4px]">
           {cache[entryId].map((data, id) => (
             <div key={id}>
-              <div className="bg-amber-900/80 w-[200px] h-[200px] flex flex-col pt-[25px] px-[25px] border-solid border-[2px] rounded-t-[8px] border-emerald-700">
+              <div className="bg-amber-900/80 w-[200px] h-[200px] flex flex-col pt-[25px] px-[25px] border-solid border-[2px] rounded-t-[8px] border-emerald-700 mt-[1rem]">
                 <img
                   src={data.image}
                   alt=""
