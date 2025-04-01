@@ -11,18 +11,20 @@ export default function Details() {
   return (
     <>
       <Header />
-      <div className="bg-[url(../assets/fanart/1133045.jpg)] h-[100svh] bg-fixed w-[100%]">
-        <section className="w-[300px] rounded-[8px] p-[10px] border-emerald-700 bg-amber-900/80 border-[2px] flex flex-col">
+      <div className="bg-[url(../assets/fanart/1133045.jpg)] h-[100svh] bg-fixed w-[100%] flex flex-col gap-[1rem] items-center">
+        <section className="w-[300px] rounded-[8px] p-[10px] border-emerald-700 bg-amber-900/80 border-[2px] flex flex-col mt-[1rem]">
           <img
             className="w-[280px] h-[280px] border-[2px] border-emerald-800"
             src={details.image}
-            alt=""
+            alt="picture of title"
           />
           <h1>{details.name} </h1>
           <p>{details.id} </p>
         </section>
-        <section>
+        <section className="w-[300px] bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px]">
           <p>{details.description} </p>
+        </section>
+        <section className="w-[300px] bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px]">
           {details.common_locations && (
             <ul>
               Common Locations:
@@ -32,7 +34,7 @@ export default function Details() {
             </ul>
           )}
         </section>
-        <section>
+        <section className="bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px] w-[300px]">
           {details.drops && details.drops[0] && (
             <ul>
               Drops:
