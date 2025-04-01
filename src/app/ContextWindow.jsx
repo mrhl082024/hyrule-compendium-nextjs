@@ -8,6 +8,7 @@ export const ContextWindow = ({ children }) => {
   const [entryId, setEntryId] = useState("");
   const [data, setData] = useState();
   const [cache, setCache] = useState({});
+  const [details, setDetails] = useState([]);
 
   useEffect(() => {
     if (!category || !entryId) return;
@@ -45,6 +46,8 @@ export const ContextWindow = ({ children }) => {
         setData,
         cache,
         setCache,
+        details,
+        setDetails,
       }}
     >
       {children}

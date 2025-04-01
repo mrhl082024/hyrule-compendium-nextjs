@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 
 export default function EntryIdCards() {
   const router = useRouter();
-  const { cache, entryId } = useContext(Context);
-  const [toggle, setToggle] = useState(false);
+  const { cache, entryId, setDetails } = useContext(Context);
+
   return (
     <>
       {cache[entryId] && (
@@ -23,6 +23,7 @@ export default function EntryIdCards() {
               </div>
               <button
                 onClick={() => {
+                  setDetails(data);
                   router.push("/compendium/details");
                 }}
                 className="bg-amber-900/80 border-b-2 border-x-2 border-emerald-700 rounded-b-[8px] w-[200px] hover:bg-green-900 cursor-pointer"
