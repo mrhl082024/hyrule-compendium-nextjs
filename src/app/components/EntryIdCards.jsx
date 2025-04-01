@@ -1,9 +1,12 @@
 "use client";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../ContextWindow.jsx";
+import { useRouter } from "next/navigation";
 
 export default function EntryIdCards() {
+  const router = useRouter();
   const { cache, entryId } = useContext(Context);
+  const [toggle, setToggle] = useState(false);
   return (
     <>
       {cache[entryId] && (
@@ -18,30 +21,14 @@ export default function EntryIdCards() {
                 />
                 <p className="leading-[30px] self-center">{data.id} </p>
               </div>
-              <details>
-                <summary className="bg-amber-900/80 border-b-2 border-x-2 border-emerald-700 rounded-b-[8px]">
-                  {data.name}{" "}
-                </summary>
-                <div>
-                  <p>{data.description} </p>
-                  {data.common_locations && (
-                    <ul>
-                      Common Locations:
-                      {data.common_locations.map((location, i) => (
-                        <li key={i}>{location}</li>
-                      ))}
-                    </ul>
-                  )}
-                  {data.drops && data.drops[0] && (
-                    <ul>
-                      Drops:
-                      {data.drops.map((drop, i) => (
-                        <li key={i}>{drop}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </details>
+              <button
+                onClick={() => {
+                  router.push("/compendium/details");
+                }}
+                className="bg-amber-900/80 border-b-2 border-x-2 border-emerald-700 rounded-b-[8px] w-[200px] hover:bg-green-900 cursor-pointer"
+              >
+                {data.name}
+              </button>
             </div>
           ))}
         </section>
