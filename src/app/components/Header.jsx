@@ -21,7 +21,7 @@ export default function Header() {
         <img
           src={headerLogo.src}
           alt="zelda botw logo"
-          className="w-[200px]"
+          className="w-[200px] cursor-pointer transition duration-[0.1s] hover:scale-[1.05]"
           onClick={() => {
             router.push("/");
           }}
@@ -36,7 +36,7 @@ export default function Header() {
               setEntryId(name.toLowerCase());
               router.push("/compendium");
             }}
-            className="w-[100px] h-[30px] bg-green-900 hover:bg-green-700"
+            className="w-[100px] h-[30px] transition duration-[0.25s] bg-gradient-to-r from-green-900 hover:bg-green-700"
           >
             {name}
           </button>

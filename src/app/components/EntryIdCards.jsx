@@ -26,7 +26,7 @@ export default function EntryIdCards() {
                   setDetails(data);
                   router.push("/compendium/details");
                 }}
-                className="bg-amber-900/80 border-b-2 border-x-2 border-emerald-700 rounded-b-[8px] w-[200px] hover:bg-green-900 cursor-pointer"
+                className="transition ease-in-out bg-amber-900/80 border-b-2 bg-gradient-to-r border-x-2 border-emerald-700   duration-[0.15s] rounded-b-[8px] w-[200px] hover:from-green-900 hover:to-emerald-700 cursor-pointer"
               >
                 {data.name}
               </button>
