@@ -28,7 +28,7 @@ export default function Header() {
           }}
         />
       </section>
-      <section>
+      <section className="bg-green-900 border-double border-t-4 border-b-4 border-emerald-600">
         {categories.map((name, id) => (
           <button
             key={id}
