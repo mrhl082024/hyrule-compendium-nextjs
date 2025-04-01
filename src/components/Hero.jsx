@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="h-[100svh] bg-[url(../assets/fanart/1133045.jpg)] flex justify-center">
-      <div className="bg-green-900/80 w-[600px] h-[fit-content] rounded-[6px] p-[18px] mt-[2rem]">
+      <div className="bg-green-900/80 w-[630px] h-[fit-content] rounded-[6px] p-[18px] mt-[2rem]">
         <h1>Welcome to Hyrule Compendium!</h1>
         <p>
           Hyrule Compendium mimics the photo album from Zelda Breath of the
