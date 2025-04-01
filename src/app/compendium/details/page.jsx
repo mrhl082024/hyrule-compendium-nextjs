@@ -24,26 +24,26 @@ export default function Details() {
         <section className="w-[300px] bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px]">
           <p>{details.description} </p>
         </section>
-        <section className="w-[300px] bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px]">
-          {details.common_locations && (
+        {details.common_locations && details.common_locations[0] && (
+          <section className="w-[300px] bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px]">
             <ul>
               Common Locations:
               {details.common_locations.map((location, i) => (
                 <li key={i}>{location}</li>
               ))}
             </ul>
-          )}
-        </section>
-        <section className="bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px] w-[300px]">
-          {details.drops && details.drops[0] && (
+          </section>
+        )}
+        {details.drops && details.drops[0] && (
+          <section className="bg-amber-900/80 border-[2px] border-emerald-700 rounded-[8px] p-[20px] w-[300px]">
             <ul>
               Drops:
               {details.drops.map((drop, i) => (
                 <li key={i}>{drop}</li>
               ))}
             </ul>
-          )}
-        </section>
+          </section>
+        )}
       </div>
       <Footer />
     </>
