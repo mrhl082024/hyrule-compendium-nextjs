@@ -6,9 +6,7 @@ import EntryIdCards from "../components/EntryIdCards.jsx";
 export default function Compendium() {
   return (
     <>
-      <Header />
       <EntryIdCards />
-      <Footer />
     </>
   );
 }

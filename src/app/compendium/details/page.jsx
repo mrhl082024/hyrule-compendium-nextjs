@@ -10,7 +10,6 @@ export default function Details() {
 
   return (
     <>
-      <Header />
       <div className="bg-[url(../assets/fanart/1133045.jpg)] h-[100svh] bg-fixed w-[100%] flex flex-col gap-[1rem] items-center">
         <section className="w-[300px] rounded-[8px] p-[10px] border-emerald-700 bg-amber-900/80 border-[2px] flex flex-col mt-[1rem]">
           <img
@@ -45,7 +44,6 @@ export default function Details() {
           </section>
         )}
       </div>
-      <Footer />
     </>
   );
 }
