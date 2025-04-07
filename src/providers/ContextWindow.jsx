@@ -3,37 +3,29 @@ import { createContext, useEffect, useState } from "react";
 
 export const Context = createContext();
 
-export const ContextWindow = ({ children }) => {
+export const DataProvider = ({ children }) => {
   const [category, setCategory] = useState("");
   const [entryId, setEntryId] = useState("");
   const [data, setData] = useState();
-  const [cache, setCache] = useState({});
   const [details, setDetails] = useState([]);
 
   useEffect(() => {
     if (!category || !entryId) return;
-    if (cache[entryId]) return;
 
-    try {
-      fetch(
-        `https://botw-compendium.herokuapp.com/api/v3/compendium/${category}/${entryId}`
-      )
-        .then((res) => res.json())
-        .then((res) => {
-          setData(res.data);
-          setCache({
-            ...cache,
-            [`${entryId}`]: res.data.toSorted((a, b) => a.id - b.id),
-          });
-        });
-    } catch (error) {
-      throw new Error(error);
-    } finally {
-      //soon tm
+    async function fetchData() {
+      try {
+        const result = await fetch(
+          `https://botw-compendium.herokuapp.com/api/v3/compendium/${category}/${entryId}`
+        );
+        const formatted = await result.json();
+        setData(formatted.data);
+        console.log(formatted);
+      } catch (err) {
+        throw new Error(err);
+      }
     }
+    fetchData();
   }, [category, entryId]);
-
-  console.log(cache);
 
   return (
     <Context.Provider
@@ -44,8 +36,6 @@ export const ContextWindow = ({ children }) => {
         setEntryId,
         data,
         setData,
-        cache,
-        setCache,
         details,
         setDetails,
       }}

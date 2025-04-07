@@ -1,7 +1,7 @@
 import "../styles/globals.css";
-import { ContextWindow } from "./ContextWindow.jsx";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import { DataProvider } from "../providers/ContextWindow.jsx";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function RootLayout({
   children,
@@ -11,11 +11,11 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <ContextWindow>
+        <DataProvider>
           <Header />
           {children}
           <Footer />
-        </ContextWindow>
+        </DataProvider>
       </body>
     </html>
   );

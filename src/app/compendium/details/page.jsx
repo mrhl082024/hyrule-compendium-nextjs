@@ -1,11 +1,9 @@
 "use client";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import { useContext } from "react";
 import { Context } from "../../ContextWindow";
 
 export default function Details() {
-  const { cache, entryId, details } = useContext(Context);
+  const { data, entryId, details } = useContext(Context);
   console.log(details);
 
   return (

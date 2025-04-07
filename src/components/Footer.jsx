@@ -1,4 +1,4 @@
-import githubLogo from "../../assets/logos/github-mark-white.png";
+import githubLogo from "@/assets/logos/github-mark-white.png";
 export default function Footer() {
   return (
     <footer className="relative w-[100%] bg-green-950 border-t-4 border-emerald-700 border-double flex items-center flex-col p-[20px]">

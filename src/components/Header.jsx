@@ -1,8 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
-import { Context } from "@/app/ContextWindow";
-import headerLogo from "../../assets/logos/zelda-botw-logo.png";
+import { Context } from "@/providers/ContextWindow";
+import headerLogo from "@/assets/logos/zelda-botw-logo.png";
 
 export default function Header() {
   const { setCategory, setEntryId } = useContext(Context);
