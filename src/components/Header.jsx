@@ -42,9 +42,6 @@ export default function Header() {
           </button>
         ))}
       </section>
-      <section>
-        <input type="text" />
-      </section>
     </div>
   );
 }
