@@ -7,7 +7,7 @@ export default function EntryIdCards() {
   const router = useRouter();
   const { data, entryId, setDetails } = useContext(Context);
 
-  if (data && data[entryId]) {
+  return (
     <>
       {data[entryId] && (
         <section className="grid grid-cols-[repeat(5,250px)] justify-center bg-[url(../assets/fanart/1133045.jpg)] bg-fixed gap-[4px]">
@@ -34,9 +34,6 @@ export default function EntryIdCards() {
           ))}
         </section>
       )}
-    </>;
-  }
-
-  return;
-  false;
+    </>
+  );
 }
